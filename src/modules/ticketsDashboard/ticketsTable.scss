@@ -1,0 +1,60 @@
+.tickets-table {
+  overflow: auto;
+  padding: 4rem 0.5rem;
+  &__header {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 1fr;
+    margin-bottom: 1rem;
+  }
+  &__add-btn {
+    border: none;
+    background-color: #1bc3ac;
+    color: white;
+    padding: 0.7rem;
+    border-radius: 2rem;
+    cursor: pointer;
+    opacity: 0.9;
+    transition: all 0.2s ease;
+    display: flex;
+    margin-left: auto;
+    &:hover {
+      opacity: 1;
+      transform: scale(1.01);
+    }
+  }
+}
+
+.ticket-row {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 1fr;
+  height: 60px;
+  text-align: center;
+  align-items: center;
+  background-color: white;
+  border-collapse: separate;
+  box-shadow: 0 0 0.8rem 0.2rem rgba(36, 22, 22, 0.065);
+  padding-inline: 1rem;
+  box-sizing: border-box;
+  * {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 100%;
+  }
+
+  &__delete-btn {
+    cursor: pointer;
+    transition: fill 0.2s ease;
+    width: fit-content;
+    margin-left: 50%;
+    svg {
+      width: 1.2rem;
+      height: 1.2rem;
+    }
+    &:hover {
+      fill: red;
+    }
+  }
+}
